@@ -1,0 +1,181 @@
+@import 'base';
+
+.nav {
+  &__logo {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  &__list {
+    font-size: 1.8rem;
+  }
+}
+
+.btn {
+  padding: 1.7rem 4rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  &-text-green {
+    color: $color-highlight;
+  }
+
+  &-green-outline {
+    border: 1px solid $color-highlight;
+    color: $color-highlight;
+  }
+
+  &-green {
+    background-color: $color-highlight;
+    color: white;
+    transition: all ease 0.2s;
+    &:hover {
+      box-shadow: 0 5rem 5rem 0 rgba(0, 0, 0, 0.151);
+      transform: translateY(-0.3rem);
+      transition: all ease 0.2s;
+    }
+  }
+}
+
+// Header
+
+.header {
+  &__title {
+    font-size: 9.4rem;
+    font-weight: bold;
+    line-height: 1;
+    filter: drop-shadow(0 5px 3px #00000062);
+    @include respond(large) {
+      font-size: 5rem;
+    }
+    @include respond(medium) {
+      font-size: 3rem;
+    }
+  }
+  &__info {
+    margin: 4rem 0;
+    font-size: 1.6rem;
+    width: 80%;
+    @include respond(medium) {
+      width: 100%;
+    }
+  }
+  span {
+    color: $color-highlight;
+  }
+}
+
+// Brands
+
+.brands {
+  background-color: $color-box;
+}
+
+//Customers
+
+.customers {
+  &__title {
+    font-size: 4rem;
+    @include respond(medium) {
+      font-size: 3rem;
+    }
+  }
+  &__cards {
+    &-card {
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+// How Section
+
+.how {
+  &__text {
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  &__card {
+    img {
+      @include respond(medium) {
+        width: 30rem;
+      }
+    }
+  }
+  &__cards-card {
+  }
+  &__card-text {
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// About US
+
+.about {
+  position: relative;
+  &__text {
+    h1 {
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  &__data {
+  }
+
+  &__dots {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+// SIgn Up
+.signup {
+  background-color: $color-box;
+  padding-bottom: 5rem;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-top: 5rem;
+
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &__fields {
+    margin-top: 4rem;
+    button {
+      box-shadow: 0 5rem 5rem 0 rgba(0, 0, 0, 0.151);
+    }
+    input {
+      background-color: white;
+      box-shadow: 0 5rem 5rem 0 rgba(0, 0, 0, 0.151);
+    }
+  }
+}

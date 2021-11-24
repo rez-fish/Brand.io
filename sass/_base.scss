@@ -1,0 +1,35 @@
+$color-highlight: #0ac05e;
+$color-text: #425466;
+$color-text-heading: #313131;
+$color-box: #f1f1f1;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@mixin container() {
+  .container {
+    padding-inline: 13rem;
+    max-width: 1920px;
+    margin: 0 auto;
+    @include respond(large) {
+      padding-inline: 6.5rem;
+    }
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == large) {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == medium) {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == small) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
