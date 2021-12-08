@@ -177,6 +177,47 @@
           box-shadow: 0 5rem 5rem 0 rgba(0, 0, 0, 0.151);
 }
 
+.swiper {
+  background-color: #f1f1f1;
+  margin: 0;
+  width: 100%;
+}
+
+.swiper-card {
+  background-color: white;
+  width: 38rem;
+  min-height: 28rem;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.swiper-card p {
+  font-size: 1.6rem;
+}
+
+.swiper-card .name h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.swiper-card .name h3 {
+  font-weight: 1rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #0ac05e;
+}
+
 .container {
   padding-inline: 13rem;
   max-width: 1920px;
@@ -537,6 +578,20 @@
   padding-top: 15rem;
 }
 
+@media (max-width: 1000px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5rem;
+  }
+}
+
 .about__text {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -552,6 +607,12 @@
   width: 70%;
 }
 
+@media (max-width: 1000px) {
+  .about__text p {
+    width: 100%;
+  }
+}
+
 .about__data {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -565,8 +626,33 @@
           justify-content: center;
 }
 
+@media (max-width: 1000px) {
+  .about__data {
+    border: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .about .buttons button {
   margin-right: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .about .buttons button {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 }
 
 .signup {
@@ -593,6 +679,44 @@
   position: absolute;
   z-index: 0;
   left: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 40rem;
+}
+
+@media (max-width: 1000px) {
+  .swiper {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper2 {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .swiper2 {
+    display: block;
+  }
+}
+
+.swiper-container {
+  margin-top: 5rem;
 }
 
 html {

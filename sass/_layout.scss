@@ -220,6 +220,12 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 15rem;
+  @include respond(medium) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 5rem;
+  }
   &__text {
     flex: 1;
     h1 {
@@ -228,6 +234,9 @@
     p {
       margin-bottom: 2rem;
       width: 70%;
+      @include respond(medium) {
+        width: 100%;
+      }
     }
   }
   &__data {
@@ -235,11 +244,23 @@
     border-left: 2px solid rgba(0, 0, 0, 0.062);
     display: flex;
     justify-content: center;
+    @include respond(medium) {
+      border: none;
+    }
   }
 
   .buttons {
+    @include respond(medium) {
+      display: flex;
+      justify-content: center;
+    }
     button {
       margin-right: 2rem;
+      @include respond(medium) {
+        margin: 0;
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
     }
   }
 }
@@ -262,4 +283,32 @@
     z-index: 0;
     left: 0;
   }
+}
+
+// SWIPER
+
+.swiper {
+  width: 100%;
+  height: 40rem;
+  @include respond(medium) {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper2 {
+  display: none;
+  @include respond(medium) {
+    display: block;
+  }
+}
+
+.swiper-container {
+  margin-top: 5rem;
 }
