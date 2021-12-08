@@ -213,3 +213,16 @@
 .swiper-button-prev::after {
   color: $color-highlight;
 }
+
+// Clients
+.clients {
+  text-align: center;
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+}
+.clients-text {
+}

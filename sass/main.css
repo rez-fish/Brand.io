@@ -218,6 +218,18 @@
   color: #0ac05e;
 }
 
+.clients {
+  text-align: center;
+}
+
+.clients h1 {
+  font-size: 4rem;
+}
+
+.clients p {
+  font-size: 1.6rem;
+}
+
 .container {
   padding-inline: 13rem;
   max-width: 1920px;
@@ -668,17 +680,52 @@
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+  .signup {
+    margin-top: 10rem;
+  }
+}
+
+.signup__text {
+  z-index: 1;
+}
+
 .signup__target {
   position: absolute;
   right: 0;
   -webkit-transform: translateX(12rem);
           transform: translateX(12rem);
+  z-index: 0;
+}
+
+@media (max-width: 1000px) {
+  .signup__target {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup__target {
+    width: 75%;
+  }
 }
 
 .signup__dots {
   position: absolute;
   z-index: 0;
   left: 0;
+}
+
+@media (max-width: 600px) {
+  .signup__fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .swiper {
@@ -717,6 +764,58 @@
 
 .swiper-container {
   margin-top: 5rem;
+}
+
+.clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-top: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+
+.clients img {
+  position: absolute;
+  left: 0;
+  top: -10rem;
+}
+
+.clients h1 {
+  font-size: 4rem;
+}
+
+@media (max-width: 1000px) {
+  .clients h1 {
+    font-size: 2rem;
+  }
+}
+
+.clients p {
+  font-size: 1.6rem;
+  width: 80%;
+}
+
+@media (max-width: 1000px) {
+  .clients p {
+    font-size: 1.2rem;
+  }
+}
+
+.clients-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html {

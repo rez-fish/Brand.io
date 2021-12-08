@@ -273,15 +273,36 @@
   justify-content: center;
   text-align: center;
 
+  @include respond(medium) {
+    margin-top: 10rem;
+  }
+
+  &__text {
+    z-index: 1;
+  }
+
   &__target {
     position: absolute;
     right: 0;
     transform: translateX(12rem);
+    z-index: 0;
+    @include respond(medium) {
+      width: 50%;
+    }
+    @include respond(small) {
+      width: 75%;
+    }
   }
   &__dots {
     position: absolute;
     z-index: 0;
     left: 0;
+  }
+  &__fields {
+    @include respond(small) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -311,4 +332,36 @@
 
 .swiper-container {
   margin-top: 5rem;
+}
+
+// Clients.
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 12.5rem;
+  padding-bottom: 12.5rem;
+  img {
+    position: absolute;
+    left: 0;
+    top: -10rem;
+  }
+  h1 {
+    font-size: 4rem;
+    @include respond(medium) {
+      font-size: 2rem;
+    }
+  }
+  p {
+    font-size: 1.6rem;
+    width: 80%;
+    @include respond(medium) {
+      font-size: 1.2rem;
+    }
+  }
+}
+.clients-text {
+  display: flex;
+  justify-content: center;
 }
